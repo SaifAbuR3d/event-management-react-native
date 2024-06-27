@@ -57,7 +57,7 @@ export default function welcome() {
 
     setIsLoadingEv(true);
     try {
-      const response = await axios.get(`${apiUrl}/api/events?pageSize=10&organizer_id=${tokenData["id"]}&sortColumn=startDate&sortOrder=desc`);
+      const response = await axios.get(`${apiUrl}/api/events?pageSize=10&organizerId=${tokenData["id"]}&sortColumn=startDate&sortOrder=desc`);
       setEvents(response.data);
     } catch (err) {
       alert('There is an error fetching data');
